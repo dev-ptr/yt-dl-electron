@@ -1,0 +1,48 @@
+{
+  "name": "yt-dl-electron",
+  "version": "1.0.0",
+  "description": "YouTube-DL Downloader GUI using Electron",
+  "main": "main.js",
+  "author": {
+    "name": "Shannon Huggins",
+    "email": "x@ptr.me"
+  },
+  "homepage": "https://github.com/dev-ptr",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.ytdlelectron",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "files": [
+      "**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^25.9.8",
+    "electron-builder": "^24.6.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
